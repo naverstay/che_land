@@ -1,0 +1,133 @@
+//<#header>====================================================================================================
+.header {
+  width: 100%;
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+
+  &__content {
+    padding: 20px 0;
+    pointer-events: all;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    transition: transform .3s, background .3s, box-shadow .3s;
+
+    @media (max-width: 2048px) {
+      max-width: 95%;
+    }
+    @media (min-width: 2049px) {
+      max-width: 1944px;
+    }
+  }
+
+  &__btn {
+    max-width: 48%;
+    display: none;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 30px;
+    padding: 15px 30px;
+    color: #fff;
+    background: #fc8132;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3), 0 0 0 10px #fff, 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  &__logo {
+
+    img {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 35px;
+        max-width: 100%;
+      }
+
+      &:last-child {
+        max-width: 80%;
+      }
+    }
+  }
+
+  &._fixed {
+    position: fixed;
+    background: rgba(255, 255, 255, .75);
+
+    .header__btn {
+      display: inline-block;
+    }
+
+    .header__logo {
+      margin-right: 20px;
+    }
+  }
+}
+
+//--------------------(max-width: $md2+px)--------------------//
+@media (max-width: $md2+px) {
+  .header {
+
+    &__content {
+      padding: 10px 20px;
+      max-width: none;
+    }
+
+    &__btn {
+      padding: 7px 18px;
+      font-size: 22px;
+      border-radius: 15px;
+      box-shadow: inset 0px 0px 6px rgb(0 0 0 / 30%), 0 0 0 5px #fff, 0px 0px 10px 2.5px rgb(0 0 0 / 50%);
+    }
+
+    &._fixed .header__logo {
+      max-width: 50%;
+      text-align: center;
+    }
+
+    &:not(._fixed) .header__logo {
+      img {
+        &:first-child {
+          max-width: 53%;
+          margin-right: 3%;
+        }
+
+        &:last-child {
+          max-width: 39.15%;
+        }
+      }
+    }
+
+    &__logo {
+
+
+    }
+  }
+}
+
+//--------------------(max-width: $md3+px)--------------------//
+@media (max-width: $md3+px) {
+  .header {
+    &__btn {
+      font-size: 14px;
+      padding: 7px;
+      border-radius: 10px;
+      box-shadow: inset 0px 0px 6px rgb(0 0 0 / 30%), 0 0 0 5px #fff, 0px 0px 10px 2.5px rgb(0 0 0 / 50%);
+    }
+
+    &__content {
+      //padding: 10px 20px;
+    }
+  }
+}
+
+//--------------------(max-width: $md4+px)--------------------//
+@media (max-width: $md4+px) {
+  .header {
+    //padding: 10px 0;
+  }
+}

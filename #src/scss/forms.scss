@@ -1,0 +1,99 @@
+//<FORM ()>====================================================================================================
+.form {
+  &__title {
+    //max-width: 60%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 20px;
+  }
+
+  &__inp {
+    //max-width: 60%;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    font-size: 18px !important;
+    padding: 10px 27px !important;
+    border-radius: 10px !important;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3), 0 0 0 4px #fff, 0px 0px 10px 2.5px rgba(0, 0, 0, 0.5) !important;
+  }
+}
+
+@media (max-width: $md1+px) {
+  .form {
+    &__inp {
+      //max-width: 80%;
+    }
+  }
+}
+
+@media (max-width: $md2+px) {
+  .form {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__inp {
+      //max-width: 80%;
+    }
+  }
+}
+
+@media (max-width: $md3+px) {
+  .form {
+    &__title {
+      max-width: none;
+      font-size: 24px;
+    }
+
+    &__inp {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: $md4+px) {
+  .form {
+    &__title {
+      max-width: none;
+    }
+  }
+}
+
+//</FORM>====================================================================================================
+
+//<INPUT (inp+tab)>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.input {
+  display: block;
+  width: 100%;
+  font-family: DRAguSans;
+  font-size: 18px;
+  color: #918f8f;
+  padding: 13px 11px;
+  background: #fff;
+  border-radius: 30px;
+
+  &._error {
+    outline: 1px solid red;
+  }
+}
+
+//</INPUT>====================================================================================================
