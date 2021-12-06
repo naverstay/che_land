@@ -127,9 +127,7 @@ wrapperModal.addEventListener('click', function () {
 });
 
 // fixed button
-let fixBtn = document.querySelector(".opening__btn");
 let fixBox = document.querySelector(".header");
-let boxBtn = document.querySelector(".opening__content");
 
 window.onscroll = function showHeader() {
   let clientHeight = document.querySelector('.opening').clientHeight;
